@@ -1,0 +1,25 @@
+{
+   "private": true,
+   "name": "trpc-monorepo",
+   "workspaces": [
+      "packages/*"
+   ],
+   "devDependencies": {
+      "open-cli": "^7.0.1",
+      "concurrently": "^6.3.0",
+      "nodemon": "^2.0.14"
+   },
+   "scripts": {
+      "misc:sourcecontrol": "git pull && yarn",
+      "misc:openweb": "open-cli http://localhost:3000",
+      "misc:buildall": "cd packages/common && yarn build && cd ../prisma && yarn build && cd ../trpc && yarn build",
+      "server:prisma:studio": "cd packages/server && npx prisma studio",
+      "server:prisma:push": "cd packages/server && npx prisma db push",
+      "package:common": "cd packages/common && yarn dev",
+      "package:server": "cd packages/server && yarn dev",
+      "package:trpc": "cd packages/trpc && yarn dev",
+      "package:web": "cd packages/web && yarn dev",
+      "dev:all": "yarn misc:openweb && concurrently --kill-others \"yarn package:common\" \"yarn package:trpc\" \"yarn package:server\" \"yarn server:prisma:studio\" \"yarn package:web\"",
+      "dev:bundle": "yarn misc:sourcecontrol && yarn misc:buildall && yarn server:prisma:push && yarn misc:openweb && yarn dev:all"
+   }
+}
