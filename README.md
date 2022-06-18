@@ -27,4 +27,4 @@ Once done, you can take a look at the main `package.json` to see all the preconf
 yarn dev:bundle
 ```
 
-> This ensures the latest code is pushed from GitHub, all the NPM packages are installed, all the packages are compiled, and then opens the Frontend and Prisma Studio on your browser, and finally launches all the projects. There is probably a more efficient way to do this, but this is how I do things.
+> This ensures the latest code is pulled from GitHub, all the NPM packages are installed, all the packages are compiled, and then opens the Frontend and Prisma Studio on your browser, and finally launches all the projects. There is probably a more efficient way to do this, but this is how I do things.
