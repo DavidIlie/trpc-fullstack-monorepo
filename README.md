@@ -31,6 +31,6 @@ yarn dev:bundle
 
 ## The Project
 
-The project contains a prebuilt "TODO" list to show the functionalities of this stack.
+The project contains a prebuilt "TODO" list application to show the functionalities of this stack.
 
 ![Example](https://user-images.githubusercontent.com/47594764/174436286-0d78134e-4d11-4e4b-86c5-7bf6854bc350.png)
