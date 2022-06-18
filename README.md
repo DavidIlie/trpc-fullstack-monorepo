@@ -1,6 +1,6 @@
 # tRPC+Prisma+Next.js+Express Monorepo Setup
 
-This repository contains a Yarn Workspace Monorepo with a:
+This repository contains a Yarn Workspace Monorepo revolving around a:
 
 -  Next.js (`web`) Frontend with TailwindCSS + tRPC react-query
 -  Express.js (`server`) Backend with tRPC as the main API Gateway
