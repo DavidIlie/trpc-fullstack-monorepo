@@ -32,7 +32,7 @@ const Home: React.FC = () => {
                const result = createInputSchema.safeParse({ name: val });
                if (!result.success)
                   return setError(result.error.issues[0].message);
-               createMutation.mutate({ name: val });
+               await createMutation.mutateAsync({ name: val });
                (e.target as any).input.value = "";
             }}
          >
