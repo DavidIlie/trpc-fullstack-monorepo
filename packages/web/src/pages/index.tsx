@@ -29,7 +29,6 @@ const Home: React.FC = () => {
                setError(null);
                e.preventDefault();
                const val = (e.target as any).input.value;
-               if (val === "") return setError("Cannot be empty.");
                const result = createInputSchema.safeParse({ name: val });
                if (!result.success)
                   return setError(result.error.issues[0].message);
