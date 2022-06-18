@@ -17,7 +17,7 @@ I wasn't able to find any sort of template with this goal in mind, to keep every
 
 You first need access to a PostgreSQL database as that is what is configuration by default, but you can easily reconfigure prisma to use PlanetScale or another provider if you so please.
 
-> WARNING: Due to current Prisma limitations, this project must run using **Node.js version 16**. If you use nvm, you can simple type on your terminal `nvm install v16.13.0`.
+> **Warning**: Due to current Prisma limitations, this project must run using **Node.js version 16**. If you use nvm, you can simple type on your terminal `nvm install v16.13.0`.
 
 Before you can run the project you need to copy `.env.template` to `.env` in each package except `common`. This is to ensure that everything will work correctly.
 
