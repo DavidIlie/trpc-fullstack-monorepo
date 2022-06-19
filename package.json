@@ -21,6 +21,6 @@
       "package:trpc": "cd packages/trpc && yarn dev",
       "package:web": "cd packages/web && yarn dev",
       "dev:all": "yarn misc:openweb && concurrently --kill-others \"yarn package:common\" \"yarn package:prisma\" \"yarn package:trpc\" \"yarn package:server\" \"yarn package:prisma:studio\" \"yarn package:web\"",
-      "dev:bundle": "yarn misc:sourcecontrol && yarn misc:buildall && yarn server:prisma:push && yarn misc:openweb && yarn dev:all"
+      "dev:bundle": "yarn misc:sourcecontrol && yarn misc:buildall && yarn package:prisma:push && yarn dev:all"
    }
 }

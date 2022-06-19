@@ -14,18 +14,18 @@ const Home: React.FC = () => {
             <title>trpc-monorepo</title>
          </Head>
          <div className="p-3">
-            <h1 className="font-medium text-3xl mb-2">{data.message}</h1>
+            <h1 className="mb-2 text-3xl font-medium">{data.message}</h1>
             <a
-               href="http://localhost:5000/api/trpc/test-prisma"
-               className="text-blue-500 hover:text-blue-600 duration-150 hover:underline"
+               href={`${process.env.NEXT_PUBLIC_API_URL}/api/trpc/test-prisma`}
+               className="text-blue-500 duration-150 hover:text-blue-600 hover:underline"
                target="_blank"
             >
                test prisma query (trpc path)
             </a>
             <br />
             <a
-               href="http://localhost:5000/api/test-prisma"
-               className="text-blue-500 hover:text-blue-600 duration-150 hover:underline"
+               href={`${process.env.NEXT_PUBLIC_API_URL}api/test-prisma`}
+               className="text-blue-500 duration-150 hover:text-blue-600 hover:underline"
                target="_blank"
             >
                test prisma query (from express)
