@@ -4,8 +4,9 @@ This repository contains a Yarn Workspace Monorepo revolving around a:
 
 -  Next.js (`web`) Frontend with TailwindCSS + tRPC react-query
 -  Express.js (`server`) Backend with tRPC as the main API Gateway
--  `trpc` package to share routes to Backend and types to Frontend. Prisma is included
--  `common` package to share code such as yup schemas (by default shared to `web` and `tRPC`)
+-  `trpc` package to share routes to Backend and types to Frontend.
+-  `common` package to share code such as yup schemas (by default shared to `web` and `trpc`)
+-  `prisma` package to give access to prisma to both the `server` directly and `trpc`
 
 You can find all packages in the `packages/` folder.
 
@@ -28,9 +29,3 @@ yarn dev:bundle
 ```
 
 > This ensures the latest code is pulled from GitHub, all the NPM packages are installed, all the packages are compiled, and then opens the Frontend and Prisma Studio on your browser, and finally launches all the projects. There is probably a more efficient way to do this, but this is how I do things.
-
-## The Project
-
-The project contains a prebuilt "TODO" list application to show the functionalities of this stack.
-
-![Example](https://user-images.githubusercontent.com/47594764/174436286-0d78134e-4d11-4e4b-86c5-7bf6854bc350.png)

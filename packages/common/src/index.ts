@@ -1,2 +1,1 @@
-export * from "./schemas/todo";
-export * from "./schemas/shared";
+export * from "./zod-schemas/example";

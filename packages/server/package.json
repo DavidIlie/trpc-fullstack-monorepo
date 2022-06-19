@@ -4,6 +4,7 @@
    "main": "index.js",
    "dependencies": {
       "@trpc-monorepo/trpc": "1.0.0",
+      "@trpc-monorepo/prisma": "1.0.0",
       "cors": "^2.8.5",
       "dotenv": "^16.0.1",
       "express": "^4.18.1",
