@@ -2,7 +2,8 @@
    "private": true,
    "name": "trpc-monorepo",
    "workspaces": [
-      "packages/*"
+      "trpc",
+      "web"
    ],
    "devDependencies": {
       "open-cli": "^7.0.1",
@@ -12,15 +13,12 @@
    "scripts": {
       "misc:sourcecontrol": "git pull && yarn",
       "misc:openweb": "open-cli http://localhost:3000",
-      "misc:buildall": "cd packages/common && yarn build && cd ../prisma && yarn build && cd ../trpc && yarn build",
-      "package:prisma:studio": "cd packages/prisma && npx prisma studio",
-      "package:prisma:push": "cd packages/prisma && npx prisma db push && yarn build",
-      "package:prisma": "cd packages/prisma && yarn dev",
-      "package:common": "cd packages/common && yarn dev",
-      "package:server": "cd packages/server && yarn dev",
-      "package:trpc": "cd packages/trpc && yarn dev",
-      "package:web": "cd packages/web && yarn dev",
-      "dev:all": "yarn misc:openweb && concurrently --kill-others \"yarn package:common\" \"yarn package:prisma\" \"yarn package:trpc\" \"yarn package:server\" \"yarn package:prisma:studio\" \"yarn package:web\"",
+      "misc:buildtrpc": "cd trpc && yarn build",
+      "prisma:studio": "cd trpc && npx prisma studio",
+      "prisma:push": "cd trpc && npx prisma db push && yarn build",
+      "package:trpc": "cd trpc && yarn dev",
+      "package:web": "cd web && yarn dev",
+      "dev:all": "yarn misc:openweb && concurrently --kill-others \"yarn package:trpc\" \"yarn prisma:studio\" \"yarn package:web\"",
       "dev:bundle": "yarn misc:sourcecontrol && yarn misc:buildall && yarn package:prisma:push && yarn dev:all"
    }
 }

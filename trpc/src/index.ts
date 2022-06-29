@@ -1,7 +1,7 @@
 import * as trpc from "@trpc/server";
-import * as trpcExpress from "@trpc/server/adapters/express";
+import * as trpcNext from "@trpc/server/adapters/next";
 
-import prisma from "@trpc-monorepo/prisma";
+import prisma from "./prisma";
 
 export const appRouter = trpc
    .router()
@@ -12,13 +12,13 @@ export const appRouter = trpc
    })
    .query("test-prisma", {
       async resolve({}) {
-         return { data: await prisma.user.findMany() };
+         return { data: prisma.user.findMany() };
       },
    });
 
 export type AppRouter = typeof appRouter;
 
-export const createExpressMiddleware = trpcExpress.createExpressMiddleware({
+export const createNextApiHandler = trpcNext.createNextApiHandler({
    router: appRouter,
    createContext: () => null,
 });

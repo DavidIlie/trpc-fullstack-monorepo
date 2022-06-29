@@ -1,5 +1,0 @@
-yarn-error.log
-dist/
-tsconfig.tsbuildinfo
-node_modules
-.env
