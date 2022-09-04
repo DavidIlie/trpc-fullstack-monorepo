@@ -1,14 +1,9 @@
-# tRPC+Prisma+Next.js+Express Monorepo Setup
+# tRPC Monorepo Setup
 
 This repository contains a Yarn Workspace Monorepo revolving around a:
 
 -  Next.js (`web`) Frontend with TailwindCSS + tRPC react-query
--  Express.js (`server`) Backend with tRPC as the main API Gateway
--  `trpc` package to share routes to Backend and types to Frontend.
--  `common` package to share code such as yup schemas (by default shared to `web` and `trpc`)
--  `prisma` package to give access to prisma to both the `server` directly and `trpc` (and can even be given direct access to the Next.js project to use in functions such as `getServerSideProps`)
-
-You can find all packages in the `packages/` folder.
+-  `trpc` package to share routes to Backend and types to Frontend (contains prisma).
 
 ## The Idea
 
